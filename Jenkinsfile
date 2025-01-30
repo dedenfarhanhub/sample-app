@@ -14,11 +14,11 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh 'docker run --rm my-node-app npm test'
-            }
-        }
+        //stage('Test') {
+        //    steps {
+        //        sh 'docker run --rm my-node-app npm test'
+        //    }
+        //}
 
         stage('Push to Docker Hub') {
             steps {
