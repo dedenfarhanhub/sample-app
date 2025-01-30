@@ -23,8 +23,8 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-                    sh 'docker tag my-node-app your-dockerhub-username/my-node-app'
-                    sh 'docker push your-dockerhub-username/my-node-app'
+                    sh 'docker tag my-node-app dedenfarhan2/my-node-app'
+                    sh 'docker push dedenfarhan2/my-node-app'
                 }
             }
         }
